@@ -16,7 +16,14 @@ class TodoComponent extends Component {
     super();
     this.state = {
       todos: ["wash up", "eat some cheese", "take a nap"],
+      age: 30
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({age: 35})
+    }, 5000);
   }
 
   render() {
@@ -24,6 +31,7 @@ class TodoComponent extends Component {
       <>
         <div className="container">
           <p>The busiest people have the most leisure...</p>
+          <p>{this.state.age}</p>
           <ul className="list-group">
             <li className="list-group-item">{this.state.todos[0]}</li>
             <li className="list-group-item">{this.state.todos[1]}</li>
