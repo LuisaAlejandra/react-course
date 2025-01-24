@@ -5,7 +5,7 @@ class TodoItem extends Component {
     return (
       <li
         key={this.props.index}
-        className="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center"
+        className="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center text-break"
       >
         {this.props.item}
         <button
