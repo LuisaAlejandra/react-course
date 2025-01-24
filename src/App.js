@@ -34,7 +34,7 @@ class TodoComponent extends Component {
 
   render() {
     const todoList = this.state.todos.map((item, index) => (
-      <li key={index} className="list-group-item">{item}</li>
+        <TodoItem item={item} key={index} />
     ));
 
     return (
@@ -48,4 +48,15 @@ class TodoComponent extends Component {
     );
   }
 }
+
+class TodoItem extends Component {
+  render() {
+    return(
+      <>
+        <li key={this.props.index} className="list-group-item">{this.props.item}</li>
+      </>
+    )
+  }
+}
+
 export default App;
